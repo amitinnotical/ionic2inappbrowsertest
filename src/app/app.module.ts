@@ -6,24 +6,33 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import {FramePage} from '../pages/frame/frame';
+import { SignaturePage } from '../pages/signature/signature';
+import { SignaturePadModule } from 'angular2-signaturepad';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    FramePage,
+    SignaturePage
   ],
   imports: [
+    SignaturePadModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    FramePage,
+    SignaturePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -11,4 +11,16 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+
+  <button (click)="onsignatureModel()" ion-button full>Open signature</button>
+  <div>
+    <img [src]="signatureImage" *ngIf="signatureImage" />
+  </div>
+  <button ion-button full (click)="launch('http://mf.destimoney.com/onlinemf/')">Launch URL</button>
+
+  <ion-content class="home">
+
+    
+  </ion-content>
+
 </ion-content>
